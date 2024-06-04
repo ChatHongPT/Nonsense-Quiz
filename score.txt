@@ -1,0 +1,4 @@
+Kal:10
+KingMan:6
+MAIN:5
+1234:2
