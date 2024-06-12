@@ -4,7 +4,7 @@
 - IntelliJ IDEA
 
 ## 프로젝트 개요
-- Socket 통신을 활용해서 multi Play가 가능한 넌센스 퀴즈게임
+- Socket 통신을 활용해서 multiPlay가 가능한 넌센스 퀴즈게임
 
 ## 팀장 및 주요 팀원
 
