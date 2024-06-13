@@ -147,16 +147,45 @@ public class MainFrame extends JFrame{
 
             // 멀티플레이어 대기방 프레임 생성
             JFrame waitingRoomFrame = new JFrame("멀티플레이어 대기방");
+            
+            
             waitingRoomFrame.setSize(400, 300);
             waitingRoomFrame.setLocationRelativeTo(null);
             waitingRoomFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
             waitingRoomFrame.setLayout(new BorderLayout());
+            
 
+
+            //setBackground
+            JLabel waitingRoomImageLabel = new JLabel(new ImageIcon("waitingbackground.jpg"));
+            waitingRoomFrame.add(waitingRoomImageLabel, BorderLayout.CENTER);
+            
+            //add playericon 
+            JLabel playerAImageLabel = new JLabel(new ImageIcon("plaayericon.png"));
+            waitingRoomFrame.add(playerAImageLabel, BorderLayout.EAST);
+            JLabel playerBImageLabel = new JLabel(new ImageIcon("plaayericon.png"));
+            waitingRoomFrame.add(playerBImageLabel, BorderLayout.WEST);
+
+
+            
             // 현재 접속자 표시
-            JLabel playerLabel = new JLabel("현재 접속자: ");
-            playerLabel.setFont(new Font("맑은 고딕", Font.PLAIN, 18));
-            playerLabel.setHorizontalAlignment(SwingConstants.CENTER);
-            waitingRoomFrame.add(playerLabel, BorderLayout.NORTH);
+            JLabel playerALabel = new JLabel();
+            JLabel playerBLabel = new JLabel();
+
+            playerALabel.setOpaque(false);
+            playerALabel.setBounds(50, 100, 400, 300);
+            
+            playerBLabel.setOpaque(false);
+            playerBLabel.setBounds(300, 100, 400, 300);
+            
+            playerALabel.setFont(new Font("맑은 고딕", Font.PLAIN, 18));
+            playerBLabel.setFont(new Font("맑은 고딕", Font.PLAIN, 18));
+            
+            playerALabel.setHorizontalAlignment(SwingConstants.CENTER);
+            playerBLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            
+            waitingRoomFrame.add(playerALabel, BorderLayout.NORTH);
+            waitingRoomFrame.add(playerBLabel, BorderLayout.NORTH);
 
             // 게임 시작 버튼
             JButton startButton = new JButton("게임 시작");
