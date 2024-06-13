@@ -69,11 +69,8 @@ public class MainFrame extends JFrame{
 
     public void SetImage()
     {
-        gifIcon = new ImageIcon("home.jpg");
-        Image image = gifIcon.getImage();
-        Image resizedImage = image.getScaledInstance(600, 400, Image.SCALE_SMOOTH);
-        resizedIcon = new ImageIcon(resizedImage);
-        gifLabel = new JLabel(resizedIcon);
+        gifIcon = new ImageIcon("homere2.gif");
+        gifLabel = new JLabel(gifIcon);
         gifLabel.setBounds(-10,-25,600,400);
     }
 
