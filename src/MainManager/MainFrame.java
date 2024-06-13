@@ -38,6 +38,7 @@ public class MainFrame extends JFrame{
 
     public MainFrame(Client client) {
         super("그림 퀴즈");
+
         this.client = client;
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
@@ -55,7 +56,6 @@ public class MainFrame extends JFrame{
         Thread BGMThread = new Thread(BGM);
         BGMThread.start();
 
-        addStartButton();
         addScoreButton();
         addOptionButton();
         addExitButton();
@@ -83,14 +83,6 @@ public class MainFrame extends JFrame{
         Font font = new Font("Arial", Font.BOLD, 36);
         TextLabel.setFont(font);
         TextLabel.setBounds(215,-25,200,200);
-    }
-
-    public void addStartButton()
-    {
-        GAME game = new GAME("Start");
-        startButton = game.getGameButton();
-        startButton.setBounds(200, 110, 200, 30);
-        layeredPane.add(startButton, JLayeredPane.PALETTE_LAYER);
     }
 
     public void addScoreButton()
@@ -134,8 +126,10 @@ public class MainFrame extends JFrame{
     }
 
     public void addMultiButton() {
+
     MultiButton = new JButton("멀티");
     MultiButton.setBounds(200, 325, 200, 30);
+
     MultiButton.addActionListener(new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
