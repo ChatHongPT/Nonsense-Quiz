@@ -34,7 +34,6 @@ public class ChatServer {
                 in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                 out = new PrintWriter(socket.getOutputStream(), true);
 
-                // Get client name
                 out.println("SUBMITNAME");
                 name = in.readLine();
                 System.out.println(name + " has joined.");
@@ -43,7 +42,6 @@ public class ChatServer {
                     clientHandlers.add(this);
                 }
 
-                // Broadcast messages from this client
                 String message;
                 while ((message = in.readLine()) != null) {
                     System.out.println(name + ": " + message);
