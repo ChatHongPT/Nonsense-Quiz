@@ -18,14 +18,12 @@ public class ChatClient {
     private String name;
 
     public ChatClient() {
-        // Layout GUI
         textField.setEditable(false);
         messageArea.setEditable(false);
         frame.getContentPane().add(textField, BorderLayout.SOUTH);
         frame.getContentPane().add(new JScrollPane(messageArea), BorderLayout.CENTER);
         frame.pack();
-
-        // Add Listeners
+        
         textField.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 out.println(textField.getText());
@@ -54,13 +52,9 @@ public class ChatClient {
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             out = new PrintWriter(socket.getOutputStream(), true);
 
-            // Send name to server
             out.println(name);
-
-            // Enable text field
             textField.setEditable(true);
 
-            // Read messages from the server and display them
             String message;
             while ((message = in.readLine()) != null) {
                 messageArea.append(message + "\n");
