@@ -22,7 +22,7 @@ public class MainFrame extends JFrame{
     JLayeredPane layeredPane;
 
     public MainFrame() {
-        super("그림 퀴즈");
+        super("Java Project");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
@@ -57,12 +57,12 @@ public class MainFrame extends JFrame{
         Image resizedImage = image.getScaledInstance(600, 400, Image.SCALE_SMOOTH);
         resizedIcon = new ImageIcon(resizedImage);
         gifLabel = new JLabel(resizedIcon);
-        gifLabel.setBounds(0,0,600,400);
+        gifLabel.setBounds(-10,-25,600,400);
     }
 
     public void SetTitle()
     {
-        TextLabel = new JLabel("Java Quiz");
+        TextLabel = new JLabel("");
         Font font = new Font("Arial", Font.BOLD, 36);
         TextLabel.setFont(font);
         TextLabel.setBounds(215,-25,200,200);
@@ -70,16 +70,16 @@ public class MainFrame extends JFrame{
 
     public void addStartButton()
     {
-        GAME game = new GAME("게임시작");
+        GAME game = new GAME("Start");
         startButton = game.getGameButton();
-        startButton.setBounds(200, 125, 200, 30);
+        startButton.setBounds(200, 110, 200, 30);
         layeredPane.add(startButton, JLayeredPane.PALETTE_LAYER);
     }
 
     public void addScoreButton()
     {
-        scoreBoardButton = new JButton("순위표 보기");
-        scoreBoardButton.setBounds(200, 175, 200, 30);
+        scoreBoardButton = new JButton("Score");
+        scoreBoardButton.setBounds(200, 160, 200, 30);
         scoreBoardButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -92,8 +92,8 @@ public class MainFrame extends JFrame{
 
     public void addOptionButton()
     {
-        OptionButton = new JButton("옵션");
-        OptionButton.setBounds(200, 225, 200, 30);
+        OptionButton = new JButton("Option");
+        OptionButton.setBounds(200, 210, 200, 30);
         OptionButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -105,8 +105,8 @@ public class MainFrame extends JFrame{
 
     public void addExitButton()
     {
-        exitButton = new JButton("종료");
-        exitButton.setBounds(200, 275, 200, 30);
+        exitButton = new JButton("Exit");
+        exitButton.setBounds(200, 260, 200, 30);
         exitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
