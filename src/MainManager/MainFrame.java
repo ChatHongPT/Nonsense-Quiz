@@ -37,7 +37,8 @@ public class MainFrame extends JFrame{
     private JFrame waitingRoomFrame;
 
     public MainFrame(Client client) {
-        super("Java Project");
+        super("그림 퀴즈");
+
         this.client = client;
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
@@ -125,8 +126,10 @@ public class MainFrame extends JFrame{
     }
 
     public void addMultiButton() {
-    MultiButton = new JButton("Start");
-    MultiButton.setBounds(200, 110, 200, 30);
+
+    MultiButton = new JButton("멀티");
+    MultiButton.setBounds(200, 325, 200, 30);
+
     MultiButton.addActionListener(new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {

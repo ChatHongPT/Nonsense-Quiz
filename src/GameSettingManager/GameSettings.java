@@ -1,7 +1,7 @@
 package GameSettingManager;
-import javax.swing.*;
 import java.awt.*;
 import java.io.*;
+import javax.swing.*;
 
 public class GameSettings extends JFrame {
     private JComboBox<String> fontComboBox;
