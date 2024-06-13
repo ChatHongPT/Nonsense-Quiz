@@ -11,20 +11,18 @@ public class GameSettings extends JFrame {
     private JButton saveButton;
     private JButton colorButton;
 
-    // File path
     private static final String SETTINGS_FILE = "settings.txt";
 
     public GameSettings() {
         setTitle("Game Settings");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        setResizable(false); // Disable window resizing
+        setResizable(false);
 
         JPanel contentPanel = new JPanel();
         contentPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         contentPanel.setLayout(new GridLayout(7, 2, 10, 10));
         setContentPane(contentPanel);
 
-        // Font ComboBox
         JLabel fontLabel = new JLabel("  Font:");
         fontComboBox = new JComboBox<>(new String[]{"Gothic", "휴먼엑스포", "맑은 고딕 Bold","HY견고딕","바탕","신명조"});
         fontComboBox.setToolTipText("Select the game's font");
@@ -35,7 +33,6 @@ public class GameSettings extends JFrame {
         add(fontLabel);
         add(fontComboBox);
 
-        // Font Size ComboBox
         JLabel fontSizeLabel = new JLabel("  Font Size:");
         fontSizeComboBox = new JComboBox<>(new String[]{"Small", "Medium", "Large"});
         fontSizeComboBox.setToolTipText("Select the size of the game's font");
@@ -46,7 +43,6 @@ public class GameSettings extends JFrame {
         add(fontSizeLabel);
         add(fontSizeComboBox);
 
-        // Window Size ComboBox
         JLabel windowSizeLabel = new JLabel("  Window Size:");
         windowSizeComboBox = new JComboBox<>(new String[]{"400x400", "600x600", "800x800"});
         windowSizeComboBox.setToolTipText("Select the game window size");
@@ -57,7 +53,7 @@ public class GameSettings extends JFrame {
         add(windowSizeLabel);
         add(windowSizeComboBox);
 
-        // Color Button
+        //Color Button
         JLabel colorLabel = new JLabel("  Color:");
         colorButton = new JButton("Pick one!");
         colorButton.setToolTipText("Click to choose a color");
@@ -71,7 +67,7 @@ public class GameSettings extends JFrame {
         add(colorLabel);
         add(colorButton);
 
-        // Volume Slider
+        //Volume
         JLabel volumeLabel = new JLabel("  Volume:");
         volumeSlider = new JSlider(JSlider.HORIZONTAL, 0, 100, 50);
         volumeSlider.setToolTipText("Adjust the game's volume");
@@ -85,7 +81,7 @@ public class GameSettings extends JFrame {
 
         add(new JLabel());
 
-        // Save Button
+        //Save Button
         saveButton = new JButton("Save");
         saveButton.setToolTipText("Click to save your settings");
         saveButton.addActionListener(e -> {
