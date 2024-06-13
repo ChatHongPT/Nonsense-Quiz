@@ -37,7 +37,7 @@ public class MainFrame extends JFrame{
     private JFrame waitingRoomFrame;
 
     public MainFrame(Client client) {
-        super("그림 퀴즈");
+        super("Java Project");
         this.client = client;
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
