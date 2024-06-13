@@ -1,7 +1,7 @@
 # 2024 JAVA PROJECT 
 
 ## 개발
-- IntelliJ IDEA
+- JAVA(VsCode)
 
 ## 프로젝트 개요
 - Socket 통신을 활용해서 multiPlay가 가능한 넌센스 퀴즈게임
@@ -25,6 +25,7 @@
 
 ## 게임 구현 기능
 
+## 싱글 모드
 
 - # 메인 화면
 
@@ -45,5 +46,24 @@
 - # 게임 결과 화면
 
   ![image](https://github.com/ChatHongPT/2024-JAVA-PROJECT/assets/129854575/19fd36de-0b4c-4421-a2c1-2b0b2083a92b)
+
+
+## 멀티 모드
+
+- # 멀티 모드 실행 
+
+![image](https://github.com/ChatHongPT/2024-JAVA-PROJECT/assets/129854575/c6de94d9-dfcb-49ae-bbfb-65ed9b74e886)
+
+- # 게임 대기 화면
+
+![image](https://github.com/ChatHongPT/2024-JAVA-PROJECT/assets/129854575/49e0e49b-1238-4546-82d8-6880fbe713a2)
+
+- # 게임 화면
+
+![image](https://github.com/ChatHongPT/2024-JAVA-PROJECT/assets/129854575/c6d0e4ef-6716-40c3-b534-6e5b5beb179a)
+
+- # 게임 결과 화면
+
+![image](https://github.com/ChatHongPT/2024-JAVA-PROJECT/assets/129854575/ee3af0da-f8ed-4220-801e-7540bf1ab8e2)
 
 
