@@ -1,39 +1,40 @@
 package MainManager;
 
-import javax.sound.sampled.*;
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
 import java.io.*;
+import javax.sound.sampled.*;
 
-public class BGMManager implements Runnable{
+public class BGMManager implements Runnable {
 
-    private String MusicPath;
+    private String musicPath = "music/manishe.wav";
     private Clip clip;
 
-    public BGMManager(String MusicPath){
-        this.MusicPath = MusicPath;
+    public BGMManager(String musicPath) {
+        this.musicPath = musicPath;
     }
 
-    public void run(){
+    public void run() {
         try {
             clip = AudioSystem.getClip();
-            File audioFile = new File(MusicPath);
+            File audioFile = new File(musicPath);
             AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
             clip.open(audioStream);
+        } catch (LineUnavailableException e) {
+            e.printStackTrace();
+        } catch (UnsupportedAudioFileException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        catch (LineUnavailableException e) { e.printStackTrace(); }
-        catch (UnsupportedAudioFileException e) { e.printStackTrace(); }
-        catch (IOException e) { e.printStackTrace(); }
 
+        clip.loop(Clip.LOOP_CONTINUOUSLY); // Set the clip to loop continuously
         clip.start();
 
-        do {
+        while (clip.isActive()) {
             try {
                 Thread.sleep(50);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-        } while (clip.isActive());
+        }
     }
 }
