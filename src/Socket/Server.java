@@ -1,4 +1,4 @@
-package Socket;
+package GameServer;
 
 import java.io.*;
 import java.net.*;
@@ -27,6 +27,7 @@ public class Server {
                 clients.add(clientHandler);
                 clientHandler.start();
                 broadcastMessage("PLAYER:" + getPlayerList());
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -55,6 +56,7 @@ public class Server {
         private BufferedReader input;
         private PrintWriter output;
         private String nickname;
+        private int score;
 
         public ClientHandler(Socket socket) {
             this.socket = socket;
@@ -75,6 +77,9 @@ public class Server {
                         broadcastMessage("PLAYER:" + getPlayerList());
                     } else if (message.equals("START")) {
                         broadcastMessage("START");
+                    }else if (message.startsWith("SCORE:")) {
+                        score = Integer.parseInt(message.substring(6));
+                        checkGameOver();
                     }
                 }
             } catch (IOException e) {
@@ -97,8 +102,45 @@ public class Server {
         public String getNickname() {
             return nickname;
         }
-    }
+    
+        public int getScore() {
+            return score;
+        }
 
+        private void determineWinner() {
+            int highestScore = 0;
+            String winner = null;
+            for (ClientHandler client : clients) {
+                if (client.getScore() > highestScore) {
+                    highestScore = client.getScore();
+                    winner = client.nickname;
+                }
+            }
+
+            if (winner != null) {
+                for (ClientHandler client : clients) {
+                   if(client.nickname  == winner) broadcastMessage("Winner \nWinner \nChicken Dinner");
+                    else broadcastMessage("You Lost");
+                }
+            } else {
+                broadcastMessage("Draw");
+            }
+        }
+
+        private void checkGameOver() {
+            boolean allScored = true;
+            for (ClientHandler client : clients) {
+                if (client.getScore() == 0) {
+                    allScored = false;
+                    break;
+                }
+            }
+
+            if (allScored) {
+                determineWinner();
+            }
+        }
+    }
     public static void main(String[] args) {
         Server server = new Server(8888);
         server.start();
