@@ -1,5 +1,5 @@
 Gothic
 Medium
 400x400
-ffffffff
+ffeeeeee
 50
