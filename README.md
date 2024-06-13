@@ -26,7 +26,7 @@
 ## 게임 구현 기능
 
 
-- # 메인 화면
+- ## 메인 화면
 
  ![image](https://github.com/ChatHongPT/2024-JAVA-PROJECT/assets/129854575/c2f543f7-8e45-4a7c-a3c3-e3b3062d5a4f)
 
@@ -35,15 +35,15 @@
 
   ![image](https://github.com/ChatHongPT/2024-JAVA-PROJECT/assets/129854575/38e11e2f-b510-4c6c-b84a-560e420a3622)
 
-- # 순위표 화면
+- ## 순위표 화면
 
   ![image](https://github.com/ChatHongPT/2024-JAVA-PROJECT/assets/129854575/76adb85c-01ea-420d-b0b2-33c772d0bcc2)
 
-- # 게임 화면
+- ## 게임 화면
 
   ![image](https://github.com/ChatHongPT/2024-JAVA-PROJECT/assets/129854575/efc38574-790f-4b27-a23c-b932ba84272a)
 
-- # 게임 결과 화면
+- ## 게임 결과 화면
 
   ![image](https://github.com/ChatHongPT/2024-JAVA-PROJECT/assets/129854575/19fd36de-0b4c-4421-a2c1-2b0b2083a92b)
 
