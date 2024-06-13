@@ -17,6 +17,10 @@
 - **최홍석**
 - **조대인**
 
+### TEAM 1 JAVA PROJECT WBS
+
+- https://docs.google.com/spreadsheets/d/13AxJwgGNC2VnQWxMEjQ5AIC6CLCdZ66Fd0nFugfy7KM/edit?gid=970999793#gid=970999793
+
 ## 게임 구현 기능
 
 - # 메인 화면
