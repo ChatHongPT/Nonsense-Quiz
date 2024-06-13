@@ -26,7 +26,7 @@ public class BGMManager implements Runnable {
             e.printStackTrace();
         }
 
-        clip.loop(Clip.LOOP_CONTINUOUSLY); // Set the clip to loop continuously
+        clip.loop(Clip.LOOP_CONTINUOUSLY);//loop infinite
         clip.start();
 
         while (clip.isActive()) {
