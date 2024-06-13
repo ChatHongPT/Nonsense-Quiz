@@ -32,7 +32,6 @@ public class MainFrame extends JFrame{
     JLabel gifLabel;
     JLayeredPane layeredPane;
 
-<<<<<<< HEAD
     private Client client;
     private JLabel playerLabel;
     private JFrame waitingRoomFrame;
@@ -40,10 +39,6 @@ public class MainFrame extends JFrame{
     public MainFrame(Client client) {
         super("그림 퀴즈");
         this.client = client;
-=======
-    public MainFrame() {
-        super("Java Project");
->>>>>>> fec609801b1d0ed7d7f0f2c966b58d24689b5394
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
