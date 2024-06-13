@@ -28,7 +28,8 @@
 
 - # 메인 화면
 
-  ![image](https://github.com/ChatHongPT/2024-JAVA-PROJECT/assets/129854575/4f81b8ed-aef5-4daa-845b-32b87f00ce63)
+ ![image](https://github.com/ChatHongPT/2024-JAVA-PROJECT/assets/129854575/c2f543f7-8e45-4a7c-a3c3-e3b3062d5a4f)
+
 
 - # 옵션 화면 (Font 설정, Font Size 설정, Window Size 설정, Color 설정, bgm 설정)
 
