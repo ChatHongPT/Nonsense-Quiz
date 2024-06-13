@@ -17,7 +17,14 @@
 - **최홍석**
 - **조대인**
 
+### TEAM 1 JAVA PROJECT WBS
+
+- https://docs.google.com/spreadsheets/d/13AxJwgGNC2VnQWxMEjQ5AIC6CLCdZ66Fd0nFugfy7KM/edit?gid=970999793#gid=970999793
+
+![스크린샷 2024-06-14 041939](https://github.com/ChatHongPT/2024-JAVA-PROJECT/assets/129854575/dc904853-9b10-4760-bb91-685399e5fae5)
+
 ## 게임 구현 기능
+
 
 - # 메인 화면
 
