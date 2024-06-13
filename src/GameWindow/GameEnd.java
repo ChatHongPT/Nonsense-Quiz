@@ -1,11 +1,10 @@
 package GameWindow;
 
 import ScoreManager.ScoreWriter;
-
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.*;
 
 public class GameEnd extends JDialog{
     int score;
