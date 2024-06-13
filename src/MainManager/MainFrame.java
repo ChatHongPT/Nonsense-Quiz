@@ -98,14 +98,14 @@ public class MainFrame extends JFrame{
                 }
     
                 // 멀티플레이어 대기방 프레임 생성
-                JFrame waitingRoomFrame = new JFrame("멀티플레이어 대기방");
+                waitingRoomFrame = new JFrame("멀티플레이어 대기방");
                 waitingRoomFrame.setSize(400, 300);
                 waitingRoomFrame.setLocationRelativeTo(null);
                 waitingRoomFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 waitingRoomFrame.setLayout(new BorderLayout());
     
                 // 현재 접속자 표시
-                JLabel playerLabel = new JLabel("현재 접속자: ");
+                playerLabel = new JLabel("현재 접속자: ");
                 playerLabel.setFont(new Font("맑은 고딕", Font.PLAIN, 18));
                 playerLabel.setHorizontalAlignment(SwingConstants.CENTER);
                 waitingRoomFrame.add(playerLabel, BorderLayout.NORTH);

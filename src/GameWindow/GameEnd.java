@@ -1,14 +1,18 @@
 package GameWindow;
 
 import ScoreManager.ScoreWriter;
+import Socket.Client;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.HashMap;
+import java.util.Map;
 import javax.swing.*;
 
 public class GameEnd extends JDialog{
     int score;
-    public GameEnd(int score){
+    private Map<String, Integer> playerScores = new HashMap<>();
+    public GameEnd(int score, Client client){
         super(new Frame(),"GameOver",true);
         super.setSize(500,400);
         super.setLocationRelativeTo(null);
@@ -23,7 +27,6 @@ public class GameEnd extends JDialog{
         addSelection(c);//use Center
 
         setVisible(true);
-
     }
 
     void addImage(Container c){
