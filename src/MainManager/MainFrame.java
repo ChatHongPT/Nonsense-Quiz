@@ -51,7 +51,7 @@ public class MainFrame extends JFrame{
         layeredPane.add(TextLabel, BorderLayout.CENTER);
         layeredPane.add(gifLabel, JLayeredPane.DEFAULT_LAYER);
 
-        BGMManager BGM = new BGMManager("music/sqidgameBGM.wav");
+        BGMManager BGM = new BGMManager("music/manishe.wav");
         Thread BGMThread = new Thread(BGM);
         BGMThread.start();
 
