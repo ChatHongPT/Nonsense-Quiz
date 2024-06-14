@@ -44,11 +44,11 @@ public class Client {
     public static void main(String[] args) {
         Client client = new Client("localhost", 8888);
 
-        // MainFrame 객체 생성
+        //MainFrame
         MainFrame mainFrame = new MainFrame(client);
         mainFrame.setVisible(true);
 
-        // 메시지 수신을 위한 스레드 생성
+        //메시지 수신을 위한 스레드 생성
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -57,7 +57,7 @@ public class Client {
                     if (message == null) {
                         break;
                     }
-                    // 받은 메시지 처리
+                    //받은 메시지 처리
                     mainFrame.processMessage(message);
                 }
             }
