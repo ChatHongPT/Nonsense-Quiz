@@ -1,4 +1,5 @@
-# 🎯 넌센스 퀴즈 게임 (Nonsense Quiz Game)
+## 🎯 넌센스 퀴즈 게임
+
 
 <div align="center">
 
