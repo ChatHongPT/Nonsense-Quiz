@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Game Banner](https://img.shields.io/badge/🎮_Nonsense_Quiz_Game-FF6B6B?style=for-the-badge&logoColor=white)
+![메인 화면](https://github.com/ChatHongPT/2024-JAVA-PROJECT/assets/129854575/c2f543f7-8e45-4a7c-a3c3-e3b3062d5a4f)
 
 **실시간 멀티플레이어 넌센스 퀴즈 게임**
 
